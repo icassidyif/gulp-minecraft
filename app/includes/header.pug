@@ -1,0 +1,36 @@
+.header
+  .header__top
+    .wrapper.wrapper-no-pad
+      .row
+        .column-1-2
+          div Подключайся и играй на наших серверах!
+        .column-1-2
+          ul.icon-menu
+            li
+              a(href="#")
+                img(src="./img/vk.png", alt="vk")
+            li
+              a(href="#")
+                img(src="./img/fb.png", alt="fb")
+            li
+              a(href="#")
+                img(src="./img/flag.png", alt="flag")
+  .header__middle
+    .wrapper
+      |dfjdhfdif
+  .header__menu
+    .wrapper
+      - 
+        var menu = [
+          'Главная', 
+          'Об игре', 
+          'Список серверов', 
+          'Наша команда'
+        ];
+      ul
+        each val in menu 
+          li
+            a(href="#")= val
+              
+          
+      

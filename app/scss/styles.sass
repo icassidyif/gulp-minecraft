@@ -1,0 +1,29 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+body
+  font-family: Arial, sen-serif
+  font-size: 14px
+  
+@import "vars";
+@import "grid";
+@import "header";
+
+.icon-menu a 
+  color: #fff
+  margin-left: 6px
+
+.icon-menu
+  list-style: none
+  display: flex
+  justify-content: center
+
+
+
+@media (min-width: 600px)
+  .column-1-2
+    width: 50%
+  .icon-menu
+    justify-content: flex-end
+  
