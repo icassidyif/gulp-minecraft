@@ -17,20 +17,59 @@
                 img(src="./img/flag.png", alt="flag")
   .header__middle
     .wrapper
-      |dfjdhfdif
+      .row
+
+        .logo
+          a(href="#")
+            img(src="./img/logo.png", alt="")
+
+
+
   .header__menu
     .wrapper
       - 
         var menu = [
-          'Главная', 
-          'Об игре', 
-          'Список серверов', 
-          'Наша команда'
+          {
+            name: 'Главная', 
+            path: 'index.html'
+          }, 
+          {
+            name: 'Об игре', 
+            path: 'about.html'
+          }, 
+          {
+            name: 'Список серверов', 
+            path: 'serverslist.html',
+            sublist: [
+              {
+                name: 'ТОП-10',
+                path: 'top-10.html'
+              },
+              {
+                name: 'Наши сервера',
+                path: 'ourservers.html'
+              }
+            ]
+          }, 
+          {
+            name: 'Наша команда', 
+            path: 'team.html'
+          },
+          {
+            name: 'Донат', 
+            path: 'donat.html'
+          }
         ];
       ul
-        each val in menu 
-          li
-            a(href="#")= val
+        each element in menu 
+          -;
+          li(class = (settings)?(settings.pageName == element.name)?'active':'':'')
+            a(href=element.path)= element.name
+            if(sublist)
+              each subelement in sublist
+                a(href = element.sublist.name) = subelement.name
+            
+            
               
           
       
