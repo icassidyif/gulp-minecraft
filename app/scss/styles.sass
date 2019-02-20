@@ -2,37 +2,32 @@
   margin: 0
   padding: 0
   box-sizing: border-box
-body
-  font-family: Arial, sen-serif
-  font-size: 14px
+
   
 @import "vars";
+@import "mixins";
+body
+  font-family: Arial, Helvetica, sens-serif
+  +propToRem(font-size, 14)
 @import "grid";
+@import "icons";
 @import "header";
 
-.icon-menu a 
-  color: #fff
-  margin-left: 6px
 
 .icon-menu
-  list-style: none
-  display: flex
-  justify-content: center
-
-
-
-@media (min-width: 600px)
-  .column-1-2
-    width: calc(100% / 2)
-  .icon-menu
-    justify-content: flex-end
-  .header__top div 
-     margin: auto
-     text-align: left
-  .header__menu ul
+  font-size: 0
+  ul
+    list-style: none
     display: flex
+  li
+    margin-left: 5px
+
+
+
+
   
-    
+  
+
     
     
   

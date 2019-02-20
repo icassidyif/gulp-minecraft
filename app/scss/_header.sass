@@ -1,14 +1,20 @@
 .header
   &__top
-    display: flex
-    align-items: center
     background: $main-color
     color: #fff
-    font-size: 16px
-    min-height: 45px
-  &__top div
-    margin: 5px auto
-    text-align: center 
+    +propToRem(font-size, 16)
+    padding: $v-step/2 0
+    text-align: center
+    .wrapper
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      align-items: center
+      +breakpoint(phablet)
+        text-align: left
+        justify-content: space-between
+  
+
   &__menu
     background: linear-gradient($main-color-lighter, $main-color)
   &__menu ul
@@ -21,6 +27,15 @@
       background: #247634
       top: 0
       left: 100%
+      width: 1px
+      height: 100%
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      background: #57e974
+      top: 0
+      left: -1px
       width: 1px
       height: 100%
 
@@ -38,8 +53,17 @@
     border-left: 1px solid #247634
     border-right: 1px solid #57e974
   &__menu ul .active a
-    color: green
+     background: linear-gradient($main-color-active-ligter, $main-color-active)
   &__middle
     min-height: 116px
     display: flex
     align-items: center
+
+.logo
+
+
+
+@media (min-width: 750px)
+  .header__menu ul
+    display: flex
+    
