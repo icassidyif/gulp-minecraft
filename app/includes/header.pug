@@ -39,17 +39,7 @@
           }, 
           {
             name: 'Список серверов', 
-            path: 'serverslist.html',
-            sublist: [
-              {
-                name: 'ТОП-10',
-                path: 'top-10.html'
-              },
-              {
-                name: 'Наши сервера',
-                path: 'ourservers.html'
-              }
-            ]
+            path: 'serverslist.html'
           }, 
           {
             name: 'Наша команда', 
@@ -65,9 +55,6 @@
           -;
           li(class = (settings)?(settings.pageName == element.name)?'active':'':'')
             a(href=element.path)= element.name
-            if(sublist)
-              each subelement in sublist
-                a(href = element.sublist.name) = subelement.name
             
             
               
