@@ -14,56 +14,105 @@
         text-align: left
         justify-content: space-between
   
-
   &__menu
-    background: linear-gradient($main-color-lighter, $main-color)
-  &__menu ul
-    position: relative
-    list-style-type: none
-    &:after
-      content: ""
+    a
       display: block
-      position: absolute
-      background: #247634
-      top: 0
-      left: 100%
-      width: 1px
-      height: 100%
-    &:before
-      content: ""
-      display: block
-      position: absolute
-      background: #57e974
-      top: 0
-      left: -1px
-      width: 1px
-      height: 100%
+      +propToRem(font-size, 16)
+      color: #ffff
+      text-decoration: none
+      padding: $v-step/4 * 3
+      font-weight: bold
+      text-align: center
+      &:hover
+        background: rgba(255,255,255, .15)
+    ul
+      list-style: none
+      display: flex
+      flex-wrap: wrap
+      border-left: 1px solid lighten(saturate($main-color, 27.77), 20.39)
+      border-right: 1px solid darken(saturate($main-color, 4.17), 12.16)
+    li
+      flex: 1 1 auto
+      border-right: 1px solid lighten(saturate($main-color, 27.77), 20.39)
+      border-left: 1px solid darken(saturate($main-color, 4.17), 12.16)
+      &:nth-child(3)
+        order: 5
+      &:nth-child(5)
+        order: 3
+      &:nth-child(4)
+        order: 4
+      +breakpoint(mobileonly)
+        width: 100%
+      +breakpoint(phablet)
+        width: calc(100% / 3)
+        &:nth-child(4), &:nth-child(3)
+          width: 50%
+      +breakpoint(laptop)
+        width: calc(100%/ 5)
+        &:nth-child(3)
+          order: 3
+        &:nth-child(5)
+          order: 5
+        &:nth-child(4), &:nth-child(3)
+          width: calc(100%/ 5)
+     
+      
 
-  &__menu li
-    min-width: calc(100%/5)
-    text-align: center
-  &__menu li a
-    display: block
-    width: 100%
-    padding: 14.5px 0
-    color:#fff
-    font-weight: bold
-    text-decoration: none
-    font-size: 16px
-    border-left: 1px solid #247634
-    border-right: 1px solid #57e974
-  &__menu ul .active a
-     background: linear-gradient($main-color-active-ligter, $main-color-active)
-  &__middle
-    min-height: 116px
-    display: flex
-    align-items: center
+
+
+
+
+    background: linear-gradient($main-color-lighter, $main-color)
+
+
+  // &__menu
+  //   background: linear-gradient($main-color-lighter, $main-color)
+  // &__menu ul
+  //   position: relative
+  //   list-style-type: none
+  //   &:after
+  //     content: ""
+  //     display: block
+  //     position: absolute
+  //     background: #247634
+  //     top: 0
+  //     left: 100%
+  //     width: 1px
+  //     height: 100%
+  //   &:before
+  //     content: ""
+  //     display: block
+  //     position: absolute
+  //     background: #57e974
+  //     top: 0
+  //     left: -1px
+  //     width: 1px
+  //     height: 100%
+  //   li
+  //     min-width: calc(100%/5)
+  //     text-align: center
+  //   li a
+  //     display: block
+  //     width: 100%
+  //     padding: 14.5px 0
+  //     color:#fff
+  //     font-weight: bold
+  //     text-decoration: none
+  //     font-size: 16px
+  //     border-left: 1px solid #247634
+  //     border-right: 1px solid #57e974
+  //   .active a
+  //     background: linear-gradient($main-color-active-ligter, $main-color-active)
+  // &__middle
+  //   min-height: 116px
+  //   display: flex
+  //   align-items: center
 
 .logo
 
 
 
-@media (min-width: 750px)
-  .header__menu ul
-    display: flex
-    
+// @media (min-width: 750px)
+//   .header__menu ul
+//     display: flex
+//     

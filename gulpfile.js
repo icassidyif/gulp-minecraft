@@ -7,6 +7,9 @@ var cleancss = require('gulp-cleancss');
 const changed = require('gulp-changed');
 var debug = require('gulp-debug')
 var plumberNotifier = require('gulp-plumber-notifier');
+var browserify = require('gulp-browserify');
+let uglify = require('gulp-uglify-es').default;
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('imgCopy', async function(){
   gulp.src('./app/img/*')
@@ -16,7 +19,12 @@ gulp.task('imgCopy', async function(){
 
 gulp.task('jsBuild', async function(){
   gulp.src('./app/js/*.js')
+    .pipe(plumberNotifier())
     .pipe(changed('./dist/js/'))
+    .pipe(browserify())
+    .pipe(sourcemaps.init())
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/js/'))
 });
 
