@@ -5,7 +5,40 @@ html(lang="uk")
   head
     include includes/head.pug
   body
+    include includes/mixins.pug
     include includes/header.pug
-    | MAIN
+    -
+      var listMenu = [
+        {
+          title: 'Main'
+        },
+        {
+          title: 'About'
+        },
+        {
+          title: 'services',
+          submenu: [
+            {
+              title: 'digging'
+            },
+            {
+              title: 'carrying'
+            },
+            {
+              title: 'flying',
+              submenu: [
+                {
+                  title: 'sky'
+                },
+                {
+                  title: 'plane'
+                }
+              ]
+            }
+          ]
+        }
+      ] 
+    +showMenu(listMenu)
+
     include includes/footer.pug
     

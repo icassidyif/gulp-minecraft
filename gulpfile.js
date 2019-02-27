@@ -60,6 +60,7 @@ gulp.task('webserver', function() {
 
 
 gulp.task('watcher', function(){
+  gulp.watch('./app/img/*', gulp.series('imgCopy'))
   gulp.watch('./app/js/*.js', gulp.series('jsBuild'))
   gulp.watch('./app/scss/*.sass', gulp.series('cssBuild'))
   gulp.watch('./app/*.pug', gulp.series('htmlBuild'))
