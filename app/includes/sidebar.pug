@@ -1,0 +1,52 @@
+include mixins.pug
+-  
+  var SideBarMenu = [
+    {
+      title: 'Мир Minecraft',
+      link: '#',
+      submenu: [
+        {
+          title: 'Блоки',
+          link: '#'
+        },
+        {
+          title: 'Мобы',
+          link: '#'
+        },
+        {
+          title: 'Структуры',
+          link: '#'
+        },
+        {
+          title: 'Биомы',
+          link: '#'
+        },
+        {
+          title: 'Миры',
+          link: '#'
+        }
+      ]
+    },
+    {
+      title: 'Industrial craft',
+      link: '#'
+    },
+    {
+      title: 'OptiFine',
+      link: '#'
+    },
+    {
+      title: 'Forge',
+      link: '#'
+    },
+    {
+      title: 'TooManyItems',
+      link: '#'
+    },
+    {
+      title: 'RailCraft',
+      link: '#'
+    }
+  ]
+.sidebar-menu
+  +showMenu(SideBarMenu)

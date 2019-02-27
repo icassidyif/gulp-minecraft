@@ -4,41 +4,14 @@ doctype html
 html(lang="uk")
   head
     include includes/head.pug
-  body
     include includes/mixins.pug
+  body
     include includes/header.pug
-    -
-      var listMenu = [
-        {
-          title: 'Main'
-        },
-        {
-          title: 'About'
-        },
-        {
-          title: 'services',
-          submenu: [
-            {
-              title: 'digging'
-            },
-            {
-              title: 'carrying'
-            },
-            {
-              title: 'flying',
-              submenu: [
-                {
-                  title: 'sky'
-                },
-                {
-                  title: 'plane'
-                }
-              ]
-            }
-          ]
-        }
-      ] 
-    +showMenu(listMenu)
-
+    .wrapper
+      .row
+        .column-laptop-1-4
+          include includes/sidebar.pug
+        .column-laptop-3-4
+          |here content  
     include includes/footer.pug
     

@@ -1,9 +1,8 @@
 mixin showMenu(array)
-
-  ul(class='test-menu')
+  ul
     each item in array
       -;
       li
-        a=item.title
+        a(href = item.link)= item.title
         if(item.submenu)
-          +showMenu(item.submenu) 
+          +showMenu(item.submenu)
