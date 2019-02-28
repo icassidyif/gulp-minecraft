@@ -1,0 +1,31 @@
+.content
+  .article
+    padding: $gutter 0
+    border-bottom: 1px solid #e7e7e7
+    margin-bottom: $v-step*3
+    & h1
+      +propToRem(font-size, 24)
+      font-weight: bold
+      margin-bottom: $v-step
+    & img
+      margin-bottom: $v-step
+    &__text
+      margin-bottom: $v-step
+    &__date
+      color: #000
+      font-weight: bold
+      margin-bottom: 5px
+
+  .article_small
+    background: linear-gradient($main-color-lighter, $main-color)
+    padding-top: $gutter - 5px
+    padding-bottom: 0
+    color: #fff
+    margin-bottom: $v-step*3/2
+    & img
+      margin: 0
+      width: 100%
+    .article__text
+      margin-bottom: $v-step/2
+
+    

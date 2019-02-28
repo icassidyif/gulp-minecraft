@@ -12,6 +12,8 @@ body
 @import "grid";
 @import "icons";
 @import "header";
+@import "sidebar";
+@import "content";
 [href^="skype:"]
   font-style: italic
   text-decoration: none
@@ -60,8 +62,6 @@ body
     +propToRem(font-size, 16)
     display: inline-block
     padding: $gutter/2
-
-
   .phone-list
     display: table
     margin-bottom: $gutter/2
@@ -89,48 +89,3 @@ body
   +breakpoint(phablet)
     margin-top: 0
 
-
-
-
-.sidebar-menu
-  & > ul
-    margin-left: 5px
-    // margin-top: 24px
-    list-style: none
-    & > li
-      border-bottom: 1px solid #e7e7e7
-      padding: 10px 0
-      & a
-        text-decoration: none
-      & > a
-        +propToRem(font-size, 20)
-        color: #121212
-      & > ul
-        margin-left: 29px
-        margin-top: 11px
-        list-style: none
-        & > li
-          padding: 5px 0
-          position: relative
-          &:before 
-            content: '-'
-            color: red
-            position: absolute
-            left: -11px
-            width: 5px
-          & > a
-            +propToRem(font-size, 16)
-            color: #ff0000
-  
-    
-
-    
-
-
-
-  
-  
-
-    
-    
-  

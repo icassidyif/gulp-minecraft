@@ -1,0 +1,37 @@
+.sidebar-menu
+  margin-top: $gutter
+  margin-left: 5px
+  & > ul
+    list-style: none
+    & > li
+      border-bottom: 1px solid #e7e7e7
+      & a
+        text-decoration: none
+        display: block
+      & > a
+        +propToRem(font-size, 20)
+        color: #121212
+        padding-top: $gutter/2
+        padding-bottom: $gutter/2
+        &:hover
+          color: #b7b7b7
+      &:first-child
+        a
+          padding-top: 0
+      & > ul
+        margin-left: 29px
+        list-style: none
+        & > li
+          position: relative
+          & > a
+            padding: 5px 0
+            +propToRem(font-size, 16)
+            color: #ff0000
+            &:before 
+              content: '-'
+              color: #ff0000
+              position: absolute
+              left: -11px
+              width: 5px
+            &:hover
+              color: #f77474
