@@ -1,5 +1,16 @@
 .footer
-  .wrapper
-    |footer
+  .footer__top
+    .wrapper
+      span Подключайся и играй на наших серверах!
+      include contacts
+  .footer__middle
+    .wrapper.partners
+      -for(var i=1; i<5; i++)
+        a(href = '#')
+          img(src = '/img/partner' + i + '.png')
+      -;
+  .footer__bottom
+    .wrapper
+      span (c) Poshtar Boba, 2016
 
 script(src= '/js/src.js')

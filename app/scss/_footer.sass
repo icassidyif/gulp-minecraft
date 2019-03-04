@@ -1,0 +1,28 @@
+.footer
+  .wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    +breakpoint(laptop)
+      justify-content: space-between   
+  &__top
+    padding: 13px 0
+    background: #fec60d
+    span
+      font-size: 20px
+      color: #fff
+  .phone-list
+    margin-bottom: 0
+  .contact
+    &__title
+      text-align: right
+      color: black
+    &__phones
+      a
+        color: black
+  &__middle
+    background: #37a14c
+    padding: $v-step/2 0
+    text-align: center
+  &__bottom
+    padding: $v-step 0

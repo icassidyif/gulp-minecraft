@@ -20,30 +20,7 @@
         a.logo(href="index.html")
           img(src="./img/logo.png", alt="")
       .column-phablet-1-2.header-column.header-column_info
-        -
-          var contacts = [
-            {
-              title: 'Админ',
-              phones: [
-                '+38(068) 333-22-10',
-                '+38(099) 750-50-50'
-              ]
-            },
-            {
-              title: 'По донату',
-              phones: ['067-33-22-180']
-            }
-
-          ]
-        .phone-list
-          each item in contacts
-            .contact
-              .contact__title=item.title
-              .contact__phones
-                each phone in item.phones
-                  div
-                    a(href="tel:"+phone.replace(/\D+/g, ""))=phone
-        -;
+        include contacts
         .div
           |Скайп: 
           a(href="skype: minecraft-km7") minecraft-km7
