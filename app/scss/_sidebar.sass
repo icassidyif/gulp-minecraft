@@ -1,5 +1,9 @@
 .sidebar-menu
   margin-left: 5px
+  margin-bottom: $v-step
+  text-align: center
+  +breakpoint(laptop)
+    text-align: left
   & > ul
     list-style: none
     & > li
@@ -18,8 +22,9 @@
         a
           padding-top: 0
       & > ul
-        margin-left: 29px
         list-style: none
+        +breakpoint(laptop)
+          margin-left: 29px
         & > li
           position: relative
           & > a
@@ -27,10 +32,11 @@
             +propToRem(font-size, 16)
             color: #ff0000
             &:before 
-              content: '-'
-              color: #ff0000
-              position: absolute
-              left: -11px
-              width: 5px
+              +breakpoint(laptop)
+                content: '-'
+                color: #ff0000
+                position: absolute
+                left: -11px
+                width: 5px
             &:hover
               color: #f77474

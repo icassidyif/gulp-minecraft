@@ -5,10 +5,12 @@
       include contacts
   .footer__middle
     .wrapper.partners
-      -for(var i=1; i<5; i++)
-        a(href = '#')
-          img(src = '/img/partner' + i + '.png')
-      -;
+      .row
+        -for(var i=1; i<5; i++)
+          .column-laptop-1-4.column-tablet-1-2
+            a(href = '#')
+              img(src = '/img/partner' + i + '.png')
+        -;
   .footer__bottom
     .wrapper
       span (c) Poshtar Boba, 2016

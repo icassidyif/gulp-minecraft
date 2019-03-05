@@ -19,10 +19,10 @@ body
     content: ""
     display: inline-block
     vertical-align: middle
-    margin-right: 5px
+    +propToRem(margin-right, 5)
     background: url('../img/skype.png')
-    width: 18px
-    height: 18px
+    +propToRem(width, 18)
+    +propToRem(height, 18)
 @import "sidebar";
 @import "content";
 @import "footer";
@@ -46,6 +46,8 @@ body
       max-width: 20%
     &_img
       max-width: 32%
+.m-b-step
+  margin-bottom: $v-step
 .m-b-half-step
   margin-bottom: $v-step/2
 .button
@@ -57,7 +59,7 @@ body
     text-transform: uppercase
   background: $secondary-color
   color: #fff
-  border-radius: 3px
+  +propToRem(border-radius, 3)
   text-decoration: none
   +propToRem(font-size, 16)
   display: inline-block
@@ -86,7 +88,8 @@ body
     list-style: none
     display: flex
   li
-    margin-left: 5px
+    +propToRem(margin-left, 5)
   +breakpoint(phablet)
     margin-top: 0
-
+.logo
+  text-align: center
